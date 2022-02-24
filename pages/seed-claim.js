@@ -71,10 +71,14 @@ const SeedClaim = () => {
                   <span className="text-white">2500.00</span>
                 </div>
                 <div>
-                  <h1 className="text-md text-white fw-bold">AVAILABLE</h1>
-                  <span className="text-white">2.40</span>
+                <input
+                  style={{ borderRadius: 12 }}
+                  type="text"
+                  placeholder="Seed "
+                />
                 </div>
                 <div>
+                
                   <button
                     style={{
                       height: 55,

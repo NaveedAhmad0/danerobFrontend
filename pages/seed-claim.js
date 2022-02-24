@@ -14,12 +14,12 @@ const SeedClaim = () => {
           }}
           className="h-mobile-100"
         >
-          <div class="container">
+          <div className="container">
             <h1 className="text-center display-2 mb-5 text-font-glock text-white">
               Seed Claim
             </h1>
 
-            <div
+            {/* <div
               style={{
                 background: "#101010",
                 padding: "40px",
@@ -50,7 +50,7 @@ const SeedClaim = () => {
                   Check
                 </button>
               </div>
-            </div>
+            </div> */}
             <div
               style={{
                 background: "#101010",

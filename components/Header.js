@@ -54,9 +54,11 @@ const Header = ({ scrollHeader, headerRightColorDark }) => {
               </a>
             </Link>
 
+            <Link href="/seed-claim">
             <a>
-              <li className="link">Claim (Soon)</li>
+              <li className="link">Claim</li>
             </a>
+            </Link>
 
             {HEADER_LINKS.map((headerLink, idx) => renderLink(headerLink, idx))}
             <Link href="/game-demo">

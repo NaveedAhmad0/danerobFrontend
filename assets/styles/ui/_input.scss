@@ -1,0 +1,34 @@
+input,
+textarea {
+  width: 100%;
+  height: 55px;
+  margin-bottom: 0px;
+  padding-right: 26px;
+  padding-left: 26px;
+  border: 0px solid #000;
+  border-radius: 100px;
+  background-color: #ffffff0f;
+  -webkit-transition: color 350ms ease, background-color 350ms ease;
+  color: #fff;
+  font-size: 20px;
+  outline: none;
+  transition: 350ms all;
+  &:hover {
+    transition: 350ms all;
+  }
+  &::placeholder {
+    color: #ffffff;
+  }
+}
+textarea {
+  width: 100%;
+  min-height: 176px;
+  margin-bottom: 0px;
+  padding: 24px 24px 16px;
+  border: 0px solid #000;
+  border-radius: 24px;
+  background-color: hsla(0, 0%, 100%, 0.06);
+  -webkit-transition: background-color 350ms ease;
+  transition: background-color 350ms ease;
+  font-size: 18px;
+}

@@ -85,7 +85,7 @@ const SeedClaim = () => {
                       borderRadius: 12,
                       backgroundImage: "url('images/1-purple.png')",
                     }}
-                    className="outline d-flex align-items-center justify-content-center dark clip-none"
+                    className="outline btn btn-dark d-flex align-items-center justify-content-center dark clip-none"
                   >
                     Claim
                   </button>

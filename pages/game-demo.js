@@ -27,28 +27,28 @@ const GameDemo = () => {
             <a
               href="https://www.instagram.com/thedanerob"
               target="_blank"
-              title="Instagram"
+              title="Instagram" rel="noreferrer"
             >
               <img src="TemplateData/logo-instagram.png" />
             </a>
             <a
               href="https://twitter.com/DanerobNFT"
               target="_blank"
-              title="Twitter"
+              title="Twitter" rel="noreferrer"
             >
               <img src="TemplateData/logo-twitter.png" />
             </a>
             <a
               href="https://discord.gg/danerob"
               target="_blank"
-              title="Discord"
+              title="Discord" rel="noreferrer"
             >
               <img src="TemplateData/logo-discord.png" />
             </a>
             <a
               href="https://solanart.io/collections/danerob"
               target="_blank"
-              title="Solanart Collection"
+              title="Solanart Collection" rel="noreferrer"
             >
               <img src="TemplateData/logo-solanart.png" />
             </a>

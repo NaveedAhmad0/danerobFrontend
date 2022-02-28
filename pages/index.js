@@ -9,18 +9,17 @@ import HomeExploreBanner from "../page-comps/home/HomeExploreBanner";
 import HomeRoadmap from "../page-comps/home/HomeRoadmap";
 
 const Home = () => {
-  return (
-   
-    <Layout title="Danerob | Home" className="home">
-      <HomeIntro />
-      <HomePromotion />
-      <HomeMedia />
-      <HomeRoadmap />
-      <HomeWhoAreWe />
-      <HomeInvestors />
-      <HomeExploreBanner />
-    </Layout>
-  );
+	return (
+		<Layout title="Danerob | Home" className="home">
+			<HomeIntro />
+			<HomePromotion />
+			<HomeMedia />
+			<HomeRoadmap />
+			<HomeWhoAreWe />
+			<HomeInvestors />
+			<HomeExploreBanner />
+		</Layout>
+	);
 };
 
 export default Home;

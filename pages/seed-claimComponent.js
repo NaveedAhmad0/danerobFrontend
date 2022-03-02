@@ -41,7 +41,7 @@ const SeedClaimComponent = () => {
 				]); 
 			})
 			.catch(function (error) {
-				alert('No Claims Found')
+			//	alert('No Claims Found')
 				console.log(error);
 			});
 		}
@@ -86,14 +86,26 @@ const SeedClaimComponent = () => {
 					alert(response.data.msg);
 					return;
 				}
-				/* setTransaction([
-					...transaction,
-					{
-						tx: response.data.tx,
-						amount: response.data.amount || 120,
-						time: new Date().toISOString(),
-					},
-				]); */
+				axios
+				.patch(`https://danerob-api.herokuapp.com/user/update-user?seed=${seed}`, {
+					"userTransaction": response.data.transaction,
+					"lastClaimDate": new Date().toDateString()
+				})
+				.then(function (response) {
+
+					alert("Success")
+					/* setTransaction([
+						...transaction,
+						{
+							tx: response.data.tx,
+							amount: response.data.amount || 120,
+							time: new Date().toISOString(),
+						},
+					]); */
+				})
+				.catch(function (error) {
+					console.log(error);
+				});
 			})
 			.catch(function (error) {
 				console.log(error);

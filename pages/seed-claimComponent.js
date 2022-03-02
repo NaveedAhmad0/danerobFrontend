@@ -83,7 +83,8 @@ const SeedClaimComponent = () => {
 			})
 			.then(function (response) {
 				if (response.data.msg) {
-					alert(response.data.msg);
+				
+					alert('Vesting contract has not yet reached release time');
 					return;
 				}
 				axios
@@ -104,11 +105,11 @@ const SeedClaimComponent = () => {
 					]); */
 				})
 				.catch(function (error) {
-					console.log(error);
+				
 				});
 			})
 			.catch(function (error) {
-				console.log(error);
+				alert('Vesting contract has not yet reached release time');
 			});
 	};
 
@@ -295,7 +296,7 @@ const SeedClaimComponent = () => {
 											href={`https://explorer.solana.com/tx/${item.userTransaction}?cluster=devnet`}
 											target="_blank"
 											rel="noreferrer">
-											{item.tx.substring(0, 10)}...
+											{item.userTransaction?.substring(0, 10)}...
 										</a>
 									</span> 
 							

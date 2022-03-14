@@ -41,7 +41,7 @@ const SeedClaimComponent = () => {
           ]);
 
 		  const remaining = (trans.filter((item) => item.lastClaimDate == null)).reduce((item,s)=>item.amount + s.amount);
-		const  total = trans.reduce((item,s)=>item.amount + s.amount);
+		  const  total = trans.reduce((item,s)=>item.amount + s.amount);
 
 
 		  setForm({remaining:remaining,total});
@@ -54,7 +54,7 @@ const SeedClaimComponent = () => {
           console.log(error);
         });
     }
-  }, [publicKey]);
+  }, [publicKey,transactionClaimed]);
 
   const handleOnChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -133,8 +133,8 @@ const SeedClaimComponent = () => {
 		const last = new Date().toDateString();
 
 		axios
-		.patch(`http://13.233.155.132/api/user/update-user?seed=${seed}`, {
-		  userTransaction: response.data.transaction,
+		.post(`http://13.233.155.132/api/user/update-user?seed=${seed}`, {
+		  userTransaction: 'NA',
 		  lastClaimDate: last,
 		})
 		.then(function (response) {
@@ -156,6 +156,7 @@ const SeedClaimComponent = () => {
 
 
       } catch (e) {
+        console.log(e);
         if (
           e.message ==
           "failed to send transaction: Transaction simulation failed: Error processing Instruction 0: invalid program argument"
@@ -362,11 +363,11 @@ const SeedClaimComponent = () => {
                   <li className="d-flex justify-content-center flex-direction-column">
                     <span className="font-weight-bold text-md">
                       <a
-                        href={`https://explorer.solana.com/tx/${item.userTransaction}?cluster=devnet`}
+                        href={`https://explorer.solana.com/tx/${item.transaction}?cluster=devnet`}
                         target="_blank"
                         rel="noreferrer"
                       >
-                        {item.userTransaction?.substring(0, 10)}...
+                        {item.transaction?.substring(0, 10)}...
                       </a>
                     </span>
                   </li>

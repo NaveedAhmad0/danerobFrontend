@@ -14,8 +14,8 @@ import {
   PublicKey,
   Transaction,
 } from "@solana/web3.js";
-import { lockToken, unLockToken } from "../solana/dev";
-import { getAccountFromSeed, getContractInfo } from "../solana";
+import { lockToken, unLockToken } from "../components/solana/dev";
+import { getAccountFromSeed, getContractInfo } from "../components/solana";
 
 export default function InfoToken() {
   const { connection } = useConnection();
